@@ -1,0 +1,27 @@
+body {
+    width: 100%;
+    margin: 0;
+    height: 0;
+}
+
+.main-wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.table {
+    width: 600px;
+
+    thead {
+        font-size: 26px;
+        font-weight: 800;
+    }
+
+    button {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

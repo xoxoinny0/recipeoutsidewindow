@@ -1,0 +1,143 @@
+/** 공통 */
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/** detail */
+
+.detail_wrap {
+    width: 1130px;
+    height: 100vh;
+    margin: auto;
+    padding: 60px 30px 50px;
+    position: relative;
+
+    .wrap {
+        padding-top: 80px;
+        margin: auto;
+        width: 50%;
+        max-height: 800px;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-content: space-between;
+
+        .wrap2{
+            width: 90%;
+            height: 25%;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            padding: 15px 15px;
+            margin-bottom: 20px;
+
+            .box {
+                height: 80%;
+            }
+
+            .left {
+                flex-grow: 1;
+                background-color: red;
+                margin-right: 20px;
+            }
+
+            .right {
+                flex-grow: 2;
+                background-color: brown;
+            }
+        }
+    }
+
+    .slide-left {
+        position: absolute;
+        top: 500px;
+        left: 200px;
+        // display: none;
+        a {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+    
+        i {
+            font-size: 30px;
+            color: #000;
+
+            &:hover {
+                color: rgb(253, 176, 41);
+            }
+        }
+    }
+    .slide-right {
+        position: absolute;
+        top: 500px;
+        right: 200px;
+        a {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+    
+        i {
+            font-size: 30px;
+            color: #000;
+
+            &:hover {
+                color: rgb(253, 176, 41);
+            }
+        }
+    }
+
+    .go_to_youtube {
+        position: absolute;
+        bottom: 300px;
+        right: 180px;
+
+        display: none;
+
+        a {
+            display: block;
+            cursor: pointer;
+            width: 80px;
+            height: 50px;
+
+            img {
+                width: 200px;
+            }
+        }
+    }
+
+    .to_back_page {
+        width: 50px;
+        position: absolute;
+        top: 780px;
+        left: 250px;
+        a {
+            display: block;
+            cursor: pointer;
+            width: 50px;
+            &:hover {
+                background-color: rgb(253, 176, 41);
+            }
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+    
+

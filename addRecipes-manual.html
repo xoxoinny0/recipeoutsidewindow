@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피 추가(상세)</title>
+    <link rel="stylesheet" href="./assets/css/addRecipes-manual.min.css">
+</head>
+<body>
+    <div class="main-wrap">
+        <h1>레시피 추가(상세)</h1>
+        <form action="form" id="addRecipe-form">
+            <div class="form-group">
+                <label for="mainImg">메인 이미지</label>
+                <div>
+                    <input type="file" name="mainImg" id="mainImg">
+                    <img src="" alt="음식 완성 사진" id="ATT_FILE_NO_MAIN">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="RCP_PAT2">요리 종류</label>
+                <div><input type="text" name="pat" id="RCP_PAT2"></div>
+            </div>
+            <div class="form-group">
+                <label for="RCP_WAY2">조리 방식</label>
+                <div><input type="text" name="way" id="RCP_WAY2"></div>
+            </div>
+            <div class="form-group">
+                <label for="RCP_NM">이름</label>
+                <div><input type="text" name="name" id="RCP_NM"></div>
+            </div>
+            <div class="form-group">
+                <label for="RCP_PARTS_DTLS">재료</label>
+                <div><input type="text" name="material" id="RCP_PARTS_DTLS"></div>
+            </div>
+            <div class="form-group">
+                <label for="HASH_TAG">해시태그</label>
+                <div><input type="text" name="hashtag" id="HASH_TAG"></div>
+            </div>
+            <div class="form-group">
+                <label for="INFO_WGT">중량(1인분)</label>
+                <div><input type="text" name="wgt" id="INFO_WGT"></div>
+            </div>
+            <div class="form-group">
+                <label for="INFO_ENG">열량</label>
+                <div><input type="text" name="eng" id="INFO_ENG"></div>
+            </div>
+            <div class="form-group">
+                <label for="INFO_CAR">탄수화물</label>
+                <div><input type="text" name="car" id="INFO_CAR"></div>
+            </div>
+            <div class="form-group">
+                <label for="INFO_PRO">단백질</label>
+                <div><input type="text" name="pro" id="INFO_PRO"></div>
+            </div>
+            <div class="form-group">
+                <label for="INFO_FAT">지방</label>
+                <div><input type="text" name="fat" id="INFO_FAT"></div>
+            </div>
+            <div class="form-group">
+                <label for="INFO_NA">나트륨</label>
+                <div><input type="text" name="na" id="INFO_NA"></div>
+            </div>
+            <div class="form-group">
+                <label for="step">레시피 단계 개수</label>
+                <div><input type="number" name="step" id="step"></div>
+            </div>
+            <div class="form-group">
+                <label for="temp">온도</label>
+                <div>
+                    <select name="temp" id="temp">
+                        <option value="hot">뜨거운</option>
+                        <option value="cold">차가운</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="time">시간</label>
+                <div>
+                    <select name="time" id="time">
+                        <option value="brunch">브런치</option>
+                        <option value="meal">식사</option>
+                        <option value="night">야식</option>
+                        <option value="snack">간식</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="submit" id="addRecipe-form__submit">저장하기</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./assets/node_modules/axios/dist/axios.min.js"></script>
+    <script type="module" src="./assets/js/addRecipes-manual.js"></script>
+</body>
+</html>

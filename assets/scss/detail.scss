@@ -1,0 +1,130 @@
+/** 공통 */
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/** detail */
+
+.detail_wrap {
+    width: 1130px;
+    height: 100vh;
+    margin: auto;
+    padding: 60px 30px 50px;
+    // background-color: rgba(0,0,0, .3);  
+    position: relative;
+
+    .img_wrap {
+        padding-top: 80px;
+        margin: auto;
+        width: 50%;
+        max-height: 1000px;
+        // background-color: rgba(0,0,0, .5);  
+        position: relative;
+        
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+        // 음식설명 텍스트
+        // mouseover 이벤트로 display:block 설정하기 
+        .description{
+            width: 100%;
+            background-color: rgba(0, 0, 0, .5);
+            opacity: 0.8;
+            position: absolute;
+            bottom: 0;
+            padding: 10px;
+            box-sizing: border-box;
+
+            display: none;
+            
+            p {
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+
+        }
+    }
+
+    .slide-left {
+        position: absolute;
+        top: 450px;
+        left: 200px;
+        display: none;
+        a {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+    
+        i {
+            font-size: 30px;
+            color: #000;
+
+            &:hover {
+                color: rgb(253, 176, 41);
+            }
+        }
+    }
+    .slide-right {
+        position: absolute;
+        top: 450px;
+        right: 200px;
+        a {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+    
+        i {
+            font-size: 30px;
+            color: #000;
+
+            &:hover {
+                color: rgb(253, 176, 41);
+            }
+        }
+    }
+
+    .go_to_youtube {
+        position: absolute;
+        top: 710px;
+        right: 190px;
+
+        a {
+            display: block;
+            cursor: pointer;
+            width: 120px;
+            &:hover {
+                background-color:rgb(253, 176, 41);
+            }
+
+            img {
+                width: 100%;
+                height: 50px;
+                object-fit: cover;
+               
+            }
+        }
+    }
+}
+    
+

@@ -1,0 +1,134 @@
+@import url('./headerFooter.min.css');
+@import url('./reset.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.main-wrap {
+    width: 1130px;
+    height: 100vh;
+    margin: auto;
+    padding: 60px 30px 50px;    
+}
+
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.weather {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    width: 1000px;
+    margin: 15px auto 25px;
+    padding: 6px 20px;
+    background-color: #FFB029;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 5px;
+    border-bottom: 2px solid #facb7b;
+    letter-spacing: 1px;
+
+    p {
+        margin-left: 40px;
+
+        span {
+            display: inline-block;
+            font-size: 20px;
+
+            &:first-child,
+            &:nth-child(2) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.recommend {
+    width: 100%;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.recipe__about {
+    width: 100%;
+    background-color: #57493D;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0px 2px 5px 2px rgb(158, 158, 158);
+
+    > img {
+        width: 100%;
+        border-radius: 5px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    > h3 {
+        font-weight: 600;
+        letter-spacing: 3px;
+        padding: 5px 10px;
+    }
+}
+
+.recipe__content {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px 10px;
+
+    p {
+        display: inline-block;
+        margin-right: 10px;
+        font-weight: 400;
+
+        &:hover {
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+}
+
+.main-recommend {
+    width: 40%;
+    margin: auto;
+
+    .recipe__about {
+        background-color: #9c7f65;
+
+        > img {
+            min-height: 200px;
+            max-height: 300px;
+        }
+
+        h3 {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+    }
+}
+
+.sub-recommend {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 80%;
+    margin: 40px auto 0;
+
+    .recipe__about {
+        width: 25%;
+        margin: 0 20px;
+
+        > img {
+            min-height: 100px;
+            max-height: 200px;
+        }
+    }
+}

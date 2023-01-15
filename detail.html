@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세미프로젝트 2조</title>
+    <link rel="stylesheet" href="./assets/css/headerFooter.min.css">
+    <link rel="stylesheet" href="./assets/css/detail.min.css">
+    <!-- 폰트어썸 키트 -->
+    <script src="https://kit.fontawesome.com/6a207e0bff.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header -->
+    <div class="topBot" data-include="inc/header.html"></div>
+
+    <div class="detail_wrap">
+        <div class="img_wrap">
+            <img src="assets/img/sample.png" alt="main_img" />
+            <div class="description">
+                <p>이름 : <span class="name">김치찌개</span></p>
+                <p>재료 : <span class="ingredient">"새우두부계란찜\n연두부 75g(3/4모), 칵테일새우 20g(5마리), 달걀 30g(1/2개), 생크림 13g(1큰술), 설탕 5g(1작은술), 무염버터 5g(1작은술)\n고명\n시금치 10g(3줄기)"</span></p>
+                <p>방식 : <span class="way">끓이기</span> </p>
+                <p>타입 : <span class="type">찌개</span></p>
+                <p>칼로리 : <span class="kcal">565kcal</span></p>
+            </div>  
+        </div>
+
+        <div class="slide-left">
+            <a href=""><i class="fa-solid fa-angles-left"></i></a>
+        </div>
+
+        <div class="slide-right">
+            <a href="" title="next step"><i class="fa-solid fa-angles-right"></i></a>
+        </div>
+
+        <div class="go_to_youtube">
+            <a href="#" title="youtube"><img src="./assets/img/youtube.png" alt="youtubelogo" /></a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="topBot" data-include="inc/footer.html"></div>
+
+    <script src="./assets/node_modules/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/include.js"></script>
+
+    <script>
+        document.querySelector('.img_wrap').addEventListener('mouseover', e => {
+            document.querySelector('.description').style.display = 'block';
+        })
+
+        document.querySelector('.img_wrap').addEventListener('mouseout', e => {
+            document.querySelector('.description').style.display = 'none';
+        })
+
+        (async () => {
+            /** GET 파라미터 받기 */
+            const params = utilHelper.getUrlParams();
+
+            // 파라미터가 정상적이지 않으므로 메세지 출력, 전페이지이동 처리 후 수행 중단(return)
+            if(!params.id){
+                alert('메뉴가 선택되지 않았습니다.');
+                history.back();
+                return;
+            }
+
+            /** Ajax 요청 */
+            let json = null;
+
+            try {
+                const response = await axios.get(`http://localhost:3001/recipes/${params.id}`);
+                json = response.data;
+            } catch (e) {
+                console.error(e);
+                alert('요청을 처리하는데 실패했습니다.');
+                return;
+            }
+
+            document.querySelector('.name').innerHTML = json.RCP_NM;
+            document.querySelector('.ingredient').innerHTML = json.RCP_PARTS_DTLS;
+            document.querySelector('.way').innerHTML = json.RCP_WAY2;
+            document.querySelector('.type').innerHTML = json.RCP_PAT2;
+            document.querySelector('.kcal').innerHTML = json.INFO_ENG;
+        })();
+
+
+    </script>
+</body>
+</html>

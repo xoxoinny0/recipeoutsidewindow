@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세미프로젝트 2조</title>
+    <link rel="stylesheet" href="./assets/css/headerFooter.min.css">
+    <link rel="stylesheet" href="./assets/css/detail3.min.css">
+    <!-- 폰트어썸 키트 -->
+    <script src="https://kit.fontawesome.com/6a207e0bff.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header -->
+    <div class="topBot" data-include="inc/header.html"></div>
+
+    <div class="detail_wrap">
+        <div class="wrap">
+           <div class="wrap2">
+            <div class="box left"><img src="" /></div>
+            <div class="box right">
+                <p>title: <span class="title"></span></p>
+                <p>채널명: <span class="channelTitle"></span></p>
+                <p><span class="description"></span></p>
+            </div>
+           </div>
+           <div class="wrap2">
+            <div class="box left"><img src="" /></div>
+            <div class="box right">
+                <p>title: <span class="title"></span></p>
+                <p>채널명: <span class="channelTitle"></span></p>
+                <p><span class="description"></span></p>
+            </div>
+           </div>
+           <div class="wrap2">
+            <div class="box left"><img src="" /></div>
+            <div class="box right">
+                <p>title: <span class="title"></span></p>
+                <p>채널명: <span class="channelTitle"></span></p>
+                <p><span class="description"></span></p>
+            </div>
+           </div>
+        </div>
+
+        <div class="slide-left">
+            <a href=""><i class="fa-solid fa-angles-left"></i></a>
+        </div>
+
+        <div class="slide-right">
+            <a href="" title="next step"><i class="fa-solid fa-angles-right"></i></a>
+        </div>
+
+        <div class="go_to_youtube">
+            <a href="#" title="youtube"><img src="./assets/img/youtube.png" alt="youtubelogo" /></a>
+        </div>
+
+        <div class="to_back_page">
+            <a href="#" ><img src="./assets/img/back.png" alt="back"></a>
+        </div>
+    </div>
+    
+
+    <!-- footer -->
+    <div class="topBot" data-include="inc/footer.html"></div>
+
+    <script src="./assets/node_modules/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/include.js"></script>
+    <script type="module" src="./assets/js/youtube.js"></script>
+
+
+
+    <script type="module">
+        import utilHelper from "../helper/UtilHelper.js";
+
+        (async () => {
+            /** GET 파라미터 받기 */
+            const params = utilHelper.getUrlParams();
+
+            // 파라미터가 정상적이지 않으므로 메세지 출력, 전페이지이동 처리 후 수행 중단(return)
+            if(!params.id){
+                alert('메뉴가 선택되지 않았습니다.');
+                history.back();
+                return;
+            }
+
+            /** Ajax 요청 */
+            let json = null;
+
+            try {
+                const response = await axios.get(`http://localhost:3001/recipes/${params.id}`);
+                json = response.data;
+            } catch (e) {
+                console.error(e);
+                alert('요청을 처리하는데 실패했습니다.');
+                return;
+            }
+
+             json.RCP_NM;
+            
+        })();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/main.min.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/cb9a8df948.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="topBot" data-include="inc/header.html"></div>
+      
+    <div class="main-wrap">
+        <section class="main">
+            <div class="weather">
+                <h2>지금은...</h2>
+                <p>
+                    현재 시간: <span id="nowTime">22:00</span>
+                    날씨: <span id="nowWeather">맑음</span>
+                    기온: <span id="nowWeather">18ºC</span>
+                </p>
+            </div>
+
+            <div class="recommend">
+                <div class="main-recommend">
+                    <div class="recipe__about">
+                        <img src="./assets/img/lamen.jpg" alt="라면">
+                        <h3 class="recipe__title">라면</h3>
+                        <div class="recipe__content">
+                            <p class="recipe__kind">#야식</p>
+                            <p class="recipe__way">#끓이기</p>
+                            <p class="recipe__hashTag">#면</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="sub-recommend">
+                    <div class="recipe__about">
+                        <img src="./assets/img/lamen.jpg" alt="라면">
+                        <h3 class="recipe__title">라면</h3>
+                        <div class="recipe__content">
+                            <p class="recipe__kind">#야식</p>
+                            <p class="recipe__way">#끓이기</p>
+                            <p class="recipe__hashTag">#면</p>
+                        </div>
+                    </div>
+                    <div class="recipe__about">
+                        <img src="./assets/img/lamen.jpg" alt="라면">
+                        <h3 class="recipe__title">라면</h3>
+                        <div class="recipe__content">
+                            <p class="recipe__kind">#야식</p>
+                            <p class="recipe__way">#끓이기</p>
+                            <p class="recipe__hashTag">#면</p>
+                        </div>
+                    </div>
+                    <div class="recipe__about">
+                        <img src="./assets/img/lamen.jpg" alt="라면">
+                        <h3 class="recipe__title">라면</h3>
+                        <div class="recipe__content">
+                            <p class="recipe__kind">#야식</p>
+                            <p class="recipe__way">#끓이기</p>
+                            <p class="recipe__hashTag">#면</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+    <div class="topBot" data-include="inc/footer.html"></div>
+    
+
+    <script src="./assets/node_modules/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/include.js"></script>
+</body>
+</html>
